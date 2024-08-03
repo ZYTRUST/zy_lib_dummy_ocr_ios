@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'zy_lib_dummy_ocr_ios'
-    s.version          = '0.0.2'
+    s.version          = '0.0.3'
     s.summary          = 'A short description of zy_lib_dummy_ocr_ios.'
     
     # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Ivan Caceres' => 'ztmobile@zytrust.com' }
-    s.source           = { :git => 'https://github.com/ZYTRUSTT/zy_lib_dummy_ocr_ios.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/ZYTRUST/zy_lib_dummy_ocr_ios.git', :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.ios.deployment_target = '12.0'
