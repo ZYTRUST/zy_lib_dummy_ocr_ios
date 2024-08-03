@@ -1,0 +1,9 @@
+use_frameworks!
+
+platform :ios, '12.0'
+
+target 'zy_lib_dummy_ocr_ios_Example' do
+  pod 'zy_lib_dummy_ocr_ios', :path => '../'
+  pod 'lottie-ios', '4.4.1'
+    
+end

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ZyOCR Confirm View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ZyOCRConfirmView" id="Y6W-OH-hqX" customClass="ZyOCRConfirmView" customModule="zy_lib_dummy_ocr_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO1-di-WBX" customClass="UIStandardButton" customModule="zy_lib_dummy_ocr_ios" customModuleProvider="target">
+                                <rect key="frame" x="32" y="664" width="326" height="60"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mDY-i3-7XU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPressedOk:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fCw-EJ-CHc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcl-1N-Qr1" customClass="UITextButton" customModule="zy_lib_dummy_ocr_ios" customModuleProvider="target">
+                                <rect key="frame" x="32" y="738" width="326" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="En otro momento">
+                                    <color key="titleColor" name="Primary"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPressedCancel:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="P0e-Fq-udB"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yc1-LZ-99s">
+                                <rect key="frame" x="70" y="97" width="250" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="E0P-Cy-PCl"/>
+                                    <constraint firstAttribute="width" constant="250" id="lYk-Dg-Ull"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No pudimos validar su identidad. Por favor volver a intentarlo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-nk-ewt">
+                                <rect key="frame" x="32" y="507" width="326" height="147"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="ScreenBackground"/>
+                        <constraints>
+                            <constraint firstItem="Gcl-1N-Qr1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="2SE-Et-DSp"/>
+                            <constraint firstItem="qO1-di-WBX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="A1z-js-BFa"/>
+                            <constraint firstItem="Wef-nk-ewt" firstAttribute="top" secondItem="yc1-LZ-99s" secondAttribute="bottom" constant="10" id="Ezd-rQ-XYY"/>
+                            <constraint firstItem="yc1-LZ-99s" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="KPj-Tb-xbQ"/>
+                            <constraint firstItem="yc1-LZ-99s" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LCN-HR-qgR"/>
+                            <constraint firstItem="Wef-nk-ewt" firstAttribute="centerX" secondItem="yc1-LZ-99s" secondAttribute="centerX" id="QRv-tE-BzT"/>
+                            <constraint firstItem="Wef-nk-ewt" firstAttribute="bottom" secondItem="qO1-di-WBX" secondAttribute="top" constant="-10" id="TaR-0G-NYf"/>
+                            <constraint firstItem="Gcl-1N-Qr1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aUH-RD-GpX"/>
+                            <constraint firstItem="Wef-nk-ewt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="lhk-Dj-7bU"/>
+                            <constraint firstAttribute="bottom" secondItem="Gcl-1N-Qr1" secondAttribute="bottom" constant="70" id="qhn-RF-gp9"/>
+                            <constraint firstAttribute="bottom" secondItem="qO1-di-WBX" secondAttribute="bottom" constant="120" id="qid-c4-YOi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qO1-di-WBX" secondAttribute="trailing" constant="32" id="uoY-kp-VKw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="Gcl-1N-Qr1" id="zUn-QK-Icv"/>
+                        <outlet property="btnOk" destination="qO1-di-WBX" id="T7o-RC-e8U"/>
+                        <outlet property="ivAdvertenciaOcr" destination="yc1-LZ-99s" id="MJt-EO-j9Y"/>
+                        <outlet property="lblMessage" destination="Wef-nk-ewt" id="bnI-Bm-1UV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="132.22748815165878"/>
+        </scene>
+        <!--ZyOCR Alert View-->
+        <scene sceneID="WhR-Sj-wFx">
+            <objects>
+                <viewController storyboardIdentifier="ZyOCRAlertView" id="b5s-I0-cN2" customClass="ZyOCRAlertView" customModule="zy_lib_dummy_ocr_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JOe-Jo-2Vi">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SBs-nE-L35">
+                                <rect key="frame" x="70" y="97" width="250" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="4wS-y1-gU3"/>
+                                    <constraint firstAttribute="height" constant="400" id="BdB-XK-Fcw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="She-oi-ACo" customClass="UIStandardButton" customModule="zy_lib_dummy_ocr_ios" customModuleProvider="target">
+                                <rect key="frame" x="32" y="744" width="326" height="60"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hKz-15-Lwc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPressedOk:" destination="b5s-I0-cN2" eventType="touchUpInside" id="bNM-Ie-0pS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superaste la cantidad maxima de intentos " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEG-gM-4Z7">
+                                <rect key="frame" x="32" y="547" width="326" height="46.666666666666629"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No pudimos validar tu identidad iintentalo nuevamente mas tarde" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1a-aw-Fae">
+                                <rect key="frame" x="32" y="643.66666666666663" width="326" height="37.333333333333371"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="GreyLight"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qgn-Pf-iPU"/>
+                        <color key="backgroundColor" name="ScreenBackground"/>
+                        <constraints>
+                            <constraint firstItem="She-oi-ACo" firstAttribute="leading" secondItem="qgn-Pf-iPU" secondAttribute="leading" constant="32" id="0pq-ae-x3g"/>
+                            <constraint firstItem="SBs-nE-L35" firstAttribute="centerX" secondItem="JOe-Jo-2Vi" secondAttribute="centerX" id="4jm-KN-OHj"/>
+                            <constraint firstItem="x1a-aw-Fae" firstAttribute="leading" secondItem="qgn-Pf-iPU" secondAttribute="leading" constant="32" id="8KZ-Lf-6xk"/>
+                            <constraint firstItem="tEG-gM-4Z7" firstAttribute="top" secondItem="SBs-nE-L35" secondAttribute="bottom" constant="50" id="BsX-75-0fo"/>
+                            <constraint firstItem="qgn-Pf-iPU" firstAttribute="bottom" secondItem="She-oi-ACo" secondAttribute="bottom" constant="6" id="IK3-WO-7xH"/>
+                            <constraint firstItem="qgn-Pf-iPU" firstAttribute="trailing" secondItem="She-oi-ACo" secondAttribute="trailing" constant="32" id="PJr-2B-0hn"/>
+                            <constraint firstItem="tEG-gM-4Z7" firstAttribute="leading" secondItem="qgn-Pf-iPU" secondAttribute="leading" constant="32" id="TfA-s0-q2f"/>
+                            <constraint firstItem="x1a-aw-Fae" firstAttribute="top" secondItem="tEG-gM-4Z7" secondAttribute="bottom" constant="50" id="gc5-an-w9P"/>
+                            <constraint firstItem="qgn-Pf-iPU" firstAttribute="trailing" secondItem="tEG-gM-4Z7" secondAttribute="trailing" constant="32" id="jHC-h9-YdU"/>
+                            <constraint firstItem="qgn-Pf-iPU" firstAttribute="trailing" secondItem="x1a-aw-Fae" secondAttribute="trailing" constant="32" id="t9N-rs-Kah"/>
+                            <constraint firstItem="SBs-nE-L35" firstAttribute="top" secondItem="qgn-Pf-iPU" secondAttribute="top" constant="50" id="xn4-QC-Vf1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnOk" destination="She-oi-ACo" id="kTQ-6C-Dtq"/>
+                        <outlet property="ivAdvertenciaOcr" destination="SBs-nE-L35" id="ImT-QX-kZq"/>
+                        <outlet property="lblDescripcion" destination="x1a-aw-Fae" id="WkB-IB-FF0"/>
+                        <outlet property="lblMessage" destination="tEG-gM-4Z7" id="Enx-Zg-APz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqz-sj-C6T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.92307692307691" y="132.93838862559241"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="GreyLight">
+            <color red="0.66699999570846558" green="0.68900001049041748" blue="0.74900001287460327" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.54100000858306885" green="0.36100000143051147" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ScreenBackground">
+            <color red="0.082999996840953827" green="0.097000002861022949" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
