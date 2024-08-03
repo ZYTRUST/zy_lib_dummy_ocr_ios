@@ -1,0 +1,24 @@
+PODS:
+  - lottie-ios (4.4.1)
+  - zy_lib_dummy_ocr_ios (0.2.5):
+    - lottie-ios (= 4.4.1)
+
+DEPENDENCIES:
+  - lottie-ios (= 4.4.1)
+  - zy_lib_dummy_ocr_ios (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+
+EXTERNAL SOURCES:
+  zy_lib_dummy_ocr_ios:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
+  zy_lib_dummy_ocr_ios: 96f45302ff25170f1f562e08beef83fd48b3bd03
+
+PODFILE CHECKSUM: e87421b20c5c80ec9482304d9165fa844410f36f
+
+COCOAPODS: 1.15.2
